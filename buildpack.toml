@@ -1,0 +1,9 @@
+api = "0.4"
+
+[buildpack]
+id = "com.thephw.buildpacks.hugo"
+version = "0.0.1"
+name = "Hugo Buildpack"
+
+[[stacks]]
+id = "io.buildpacks.samples.stacks.bionic"
