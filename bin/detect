@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+build_dir=$1
+cd build_dir
+
 if [[ ! -f config.toml ]]; then
    echo "bin/detect FAILED"
    exit 100

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+build_dir=$1
+cd build_dir
+
+cat << EOF
+---
+default_process_types:
+  web: "hugo server --bind '0.0.0.0' -p \${PORT:-8080}"
+EOF
