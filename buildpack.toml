@@ -6,4 +6,4 @@ version = "0.0.1"
 name = "Hugo Buildpack"
 
 [[stacks]]
-id = "io.buildpacks.samples.stacks.bionic"
+id = "heroku-20"
