@@ -13,15 +13,11 @@ hugolayer="$build_dir"/hugo
 mkdir -p "$hugolayer/bin"
 hugo_url=https://github.com/gohugoio/hugo/releases/download/v0.79.1/hugo_0.79.1_Linux-64bit.tar.gz
 wget -q -O - "$hugo_url" | tar -xzf - -C "$hugolayer"
-mv "$hugolayer/hugo" "$hugolayer/bin/hugo"
-
-echo -e 'launch = true' > "$hugolayer.toml"
-echo "$hugolayer"/:$PATH
-export PATH="$hugolayer"/bin:$PATH
-echo "export PATH=$hugolayer/bin:$PATH" > $env_dir/PATH
+mv "$hugolayer/hugo" "./bin/hugo"
+rm -rf $hugolayer
 
 echo '---> Build site'
-hugo
+./bin/hugo
 
 cat > "$build_dir/launch.toml" <<EOL
 [[processes]]

@@ -3,5 +3,5 @@
 cat << EOF
 ---
 default_process_types:
-  web: "$1/hugo/bin/hugo server --bind '0.0.0.0' -p \${PORT:-8080}"
+  web: "./bin/hugo server --bind '0.0.0.0' -p \${PORT:-8080}"
 EOF
