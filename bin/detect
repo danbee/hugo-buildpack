@@ -2,6 +2,8 @@
 set -eo pipefail
 
 if [[ ! -f config.toml ]]; then
+   echo "bin/detect FAILED"
    exit 100
+else
+   echo "bin/detect PASSED"
 fi
-
