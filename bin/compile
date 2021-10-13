@@ -16,7 +16,7 @@ mv "$hugolayer/hugo" "$hugolayer/bin/hugo"
 echo -e 'launch = true' > "$hugolayer.toml"
 echo "$hugolayer"/:$PATH
 export PATH="$hugolayer"/bin:$PATH
-echo "export PATH=$hugolayer/bin:$PATH" > env_dir/PATH
+echo "export PATH=$hugolayer/bin:$PATH" > $env_dir/PATH
 
 echo '---> Build site'
 hugo
