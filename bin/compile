@@ -7,6 +7,8 @@ build_dir=$1
 cache_dir=$2
 env_dir=$3
 
+cd $build_dir
+
 hugolayer="$build_dir"/hugo
 mkdir -p "$hugolayer/bin"
 hugo_url=https://github.com/gohugoio/hugo/releases/download/v0.79.1/hugo_0.79.1_Linux-64bit.tar.gz
