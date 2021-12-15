@@ -1,7 +1,7 @@
 api = "0.4"
 
 [buildpack]
-id = "com.thephw.buildpacks.hugo"
+id = "in.danbee.buildpacks.hugo"
 version = "0.0.1"
 name = "Hugo Buildpack"
 

@@ -9,14 +9,15 @@ env_dir=$3
 
 cd $build_dir
 
-echo "---> Download Hugo"
-
 hugolayer="$build_dir"/hugo
 mkdir -p "$hugolayer/bin"
-hugo_url=https://github.com/gohugoio/hugo/releases/download/v0.90.1/hugo_0.90.1_Linux-64bit.tar.gz
+hugo_url=https://github.com/gohugoio/hugo/releases/download/v0.90.1/hugo_extended_0.90.1_Linux-64bit.tar.gz
 wget -q -O - "$hugo_url" | tar -xzf - -C "$hugolayer"
 mv "$hugolayer/hugo" "./bin/hugo"
 rm -rf $hugolayer
+
+echo '---> Build site'
+./bin/hugo -v
 
 cat > "$build_dir/launch.toml" <<EOL
 [[processes]]
